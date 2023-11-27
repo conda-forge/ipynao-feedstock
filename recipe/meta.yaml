@@ -1,6 +1,7 @@
 {% set name = "ipynao" %}
 {% set version = "0.7.3" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
