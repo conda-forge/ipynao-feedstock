@@ -1,5 +1,5 @@
 {% set name = "ipynao" %}
-{% set version = "0.8.3" %}
+{% set version = "0.8.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ipynao-{{ version }}.tar.gz
-  sha256: 741ece2ae09a86e94e7b93b12f2990395e92ed6cf4a6d54863286df884db07a1
+  sha256: 3fd4caf38843c9d26942fea400a44ae0983542a1f382b40e8fda2e61620eb59a
 
 build:
   noarch: python
