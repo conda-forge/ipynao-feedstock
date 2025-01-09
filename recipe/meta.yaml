@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ipynao-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ipynao-{{ version }}.tar.gz
   sha256: d7806df4bd65584b1de116256722baf8e195a824e6046a2c67887b6c6cc3d462
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - hatchling >=1.3.1
     - hatch-jupyter-builder
     - jupyterlab ==3.*
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - ipywidgets >=7.0.0
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jupyter-robotics/ipynao/
